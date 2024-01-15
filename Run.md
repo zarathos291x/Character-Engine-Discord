@@ -1,0 +1,1 @@
+dotnet run Character-Engine-Discord.csproj

@@ -264,22 +264,22 @@ namespace CharacterEngineDiscord.Handlers.SlashCommands
                 format = characterWebhook.PersonalMessagesFormat ?? characterWebhook.Channel.Guild.GuildMessagesFormat ?? ConfigFile.DefaultMessagesFormat.Value!;
             }
 
-            string text = format.Replace("{{msg}}", "Hello!").Replace("{{user}}", "Average AI Enjoyer");
+            string text = format.Replace("{{msg}}", "Hello!").Replace("{{user}}", "Lemon");
 
             if (text.Contains("{{ref_msg_text}}"))
             {
                 text = text.Replace("{{ref_msg_text}}", "Hola")
                            .Replace("{{ref_msg_begin}}", "")
                            .Replace("{{ref_msg_end}}", "")
-                           .Replace("{{ref_msg_user}}", "Dude")
+                           .Replace("{{ref_msg_user}}", "Met")
                            .Replace("\\n", "\n");
             }
 
             var embed = new EmbedBuilder().WithTitle($"{title}")
                                           .WithColor(Color.Gold)
                                           .AddField("Format:", $"`{format}`")
-                                          .AddField("Example", $"Referenced message: *`Hola`* from user *`Dude`*\n" +
-                                                               $"User nickname: `Average AI Enjoyer`\n" +
+                                          .AddField("Example", $"Referenced message: *`Hola`* from user *`Met`*\n" +
+                                                               $"User nickname: `Lemon`\n" +
                                                                $"User message: *`Hello!`*\n" +
                                                                $"Result (what character will see):\n*`{text}`*");
 

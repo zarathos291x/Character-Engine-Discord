@@ -1,21 +1,19 @@
 ﻿{
-  // https://github.com/drizzle-mizzle/Character-Engine-Discord/wiki/Config
   "db_file_name": "database.sqlite3",
   "db_connection_string": "",
   "db_enable_logging": false,
   "enable_file_logging": false,
 
-  "discord_bot_token": "YOUR_BOT_TOKEN",
+  "discord_bot_token": "MTE5NDIzNzM1Njg3ODg3NjcxMw.GYFZ8R.g0O-_UTMPfmaPXRyUg0XGBiXCEJjZDfOInKTno",
   "discord_bot_manager_role": "Manage Character",
 
-  "hoster_discord_id": null,
-  "discord_logs_channel_id": null,
-  "discord_error_logs_channel_id": null,
+  "hoster_discord_id": 763637298537037835,
+  "discord_logs_channel_id": 1192884548674011147,
+  "discord_error_logs_channel_id": 1192884548674011147,
   "no_permission_file": "nopower.gif",
   "rate_limit": 15,
   "max_characters_per_channel": 15,
 
-  // c.ai integration
   "use_character_ai": true,
   "puppeteer_browser_directory": null,
   "puppeteer_browser_executable_path": null,

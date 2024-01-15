@@ -122,7 +122,7 @@ namespace CharacterEngineDiscord.Handlers.SlashCommands
             if (string.IsNullOrWhiteSpace(caiToken))
             {
                 await FollowupAsync(embed: ($"{WARN_SIGN_DISCORD} You have to specify a CharacterAI auth token for your server first!\n" +
-                                            $"How to get CharacterAI auth token: [wiki/Important-Notes-and-Additional-Guides](https://github.com/drizzle-mizzle/Character-Engine-Discord/wiki/Important-Notes-and-Additional-Guides#get-characterai-user-auth-token)\n" +
+                                            $"How to get CharacterAI auth token: [https://pypi.org/project/characterai/]\n" +
                                             $"Command: `/set-server-cai-token`").ToInlineEmbed(Color.Red), ephemeral: silent);
                 return;
             }

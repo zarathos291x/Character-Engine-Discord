@@ -80,22 +80,22 @@ namespace CharacterEngineDiscord.Handlers.SlashCommands
             characterWebhook.PersonalMessagesFormat = newFormat;
             await TryToSaveDbChangesAsync(_db);
 
-            string text = newFormat.Replace("{{msg}}", "Hello!").Replace("{{user}}", "Average AI Enjoyer");
+            string text = newFormat.Replace("{{msg}}", "Hello!").Replace("{{user}}", "Lemon");
 
             if (refCount == 3)
             {
                 text = text.Replace("{{ref_msg_text}}", "Hola")
                            .Replace("{{ref_msg_begin}}", "")
                            .Replace("{{ref_msg_end}}", "")
-                           .Replace("{{ref_msg_user}}", "Dude")
+                           .Replace("{{ref_msg_user}}", "Met")
                            .Replace("\\n", "\n");
             }
 
             var embed = new EmbedBuilder().WithTitle($"{OK_SIGN_DISCORD} **{characterWebhook.Character.Name}**")
                                           .AddField("New format:", $"`{newFormat}`")
                                           .AddField("[Example]", $"User message: *`Hello!`*\n" +
-                                                                 $"User nickname: `Average AI Enjoyer`\n" +
-                                                                 $"Referenced message: *`Hola`* from user *`Dude`*\n" +
+                                                                 $"User nickname: `Lemon`\n" +
+                                                                 $"Referenced message: *`Hola`* from user *`Met`*\n" +
                                                                  $"Result (what character will see): *`{text}`*")
                                           .WithColor(Color.Green)
                                           .Build();
